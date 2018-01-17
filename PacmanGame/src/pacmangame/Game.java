@@ -27,7 +27,7 @@ public class Game extends JFrame implements   KeyListener
         lblf=new JLabel(new ImageIcon(getClass().getResource("pacman.gif")));
         lblf.setBounds(300,250,128,128);
         
-        lblf2=new JLabel(new ImageIcon(getClass().getResource("fantasma.gif")));
+        lblf2=new JLabel(new ImageIcon(getClass().getResource("fantasma_nuevo.gif")));
         lblf2.setBounds(400,350,228,228);
         
         lblobs=new JLabel(new ImageIcon(getClass().getResource("Pared.jpg")));//PARED DERECHA INFERIOR

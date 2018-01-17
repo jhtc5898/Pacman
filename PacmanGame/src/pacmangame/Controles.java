@@ -10,7 +10,6 @@ import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 
 
-
 public class Controles  implements KeyListener {
     
 private Game game ;
