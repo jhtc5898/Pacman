@@ -7,7 +7,7 @@ public class Game extends JFrame implements   KeyListener
 {
   //  private JFrame vent;
    JLabel lblf,lblxy,lbl, lblobs, lblf2;
-   JLabel lblObs1;
+   JLabel lblObs1, lado3, lado4, lado5, lado6, lado7, lado8, lado9, lado10;
      int x=0,y=0,l;
      int x1=0,y1=0;
 
@@ -32,15 +32,38 @@ public class Game extends JFrame implements   KeyListener
         lblf2.setBounds(400,350,228,228);
         
         lblobs=new JLabel(new ImageIcon(getClass().getResource("Pared.jpg")));//PARED DERECHA INFERIOR
-        lblobs.setBounds(600,500,90,150); // Diferencia de 120 // 700
+        lblobs.setBounds(600,500,60,130); // Diferencia de 120 // 700
         lblObs1=new JLabel(new ImageIcon(getClass().getResource("pared.jpg")));// PARED DERECHA SUPERIOR
-        lblObs1.setBounds(600,0,90,150);
+        lblObs1.setBounds(600,0,60,130);
+        lado3=new JLabel(new ImageIcon(getClass().getResource("pared.jpg")));// PARED DERECHA CENTRO
+        lado3.setBounds(600,250,60,130);
+        lado4=new JLabel(new ImageIcon(getClass().getResource("pared.jpg")));// PARED IZQUIERDA SUPERIOR
+        lado4.setBounds(0,0,60,130);
+        lado5=new JLabel(new ImageIcon(getClass().getResource("pared.jpg")));// PARED IZQUIERDA INFERIOR
+        lado5.setBounds(0,500,60,130);
+        lado6=new JLabel(new ImageIcon(getClass().getResource("pared.jpg")));// PARED IZQUIERDA CENTRO
+        lado6.setBounds(0,250,60,130);
+        lado7=new JLabel(new ImageIcon(getClass().getResource("pared.jpg")));// PARED CENTRO SUPERIOR
+        lado7.setBounds(400,0,100,50);
+        lado8=new JLabel(new ImageIcon(getClass().getResource("pared.jpg")));// PARED CENTRO SUPERIOR
+        lado8.setBounds(200,0,100,50);
+        lado9=new JLabel(new ImageIcon(getClass().getResource("pared.jpg")));// PARED CENTRO INFERIOR
+        lado9.setBounds(360,580,100,50);
+        lado10=new JLabel(new ImageIcon(getClass().getResource("pared.jpg")));// PARED CENTRO INFERIOR
+        lado10.setBounds(158,580,100,50);
         
         this.getContentPane().add(lblObs1);
         this.getContentPane().add(lblf);
         this.getContentPane().add(lblobs);
         this.getContentPane().add(lblf2);
-        
+        this.getContentPane().add(lado3);
+        this.getContentPane().add(lado4);
+        this.getContentPane().add(lado5);
+        this.getContentPane().add(lado6);
+        this.getContentPane().add(lado7);
+        this.getContentPane().add(lado8);
+        this.getContentPane().add(lado9);
+        this.getContentPane().add(lado10);
         
         lblObs1=new JLabel(new ImageIcon(getClass().getResource("Obstaculo.jpg")));
         lblObs1.setBounds(300,250,50,50);
@@ -50,7 +73,7 @@ public class Game extends JFrame implements   KeyListener
         lblxy.setForeground(Color.WHITE);
         this.getContentPane().add(lblxy);
         
-        lbl=new JLabel(new ImageIcon(getClass().getResource("cuadro.jpg")));
+        lbl=new JLabel(new ImageIcon(getClass().getResource("Pac_1.jpg")));
         lbl.setBounds(0,0,700, 700);
         this.getContentPane().add(lbl);
         tfan.start();
@@ -157,7 +180,10 @@ public class Game extends JFrame implements   KeyListener
                {
                t.stop();
                }
-               
+               if(x>=508  && y >=168 && x>=508 && y<=326)
+               {
+               t.stop();
+               }
                        
         }
 
