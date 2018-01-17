@@ -13,11 +13,12 @@ public class Game extends JFrame implements   KeyListener
     public Game() 
     {
         this.setBackground(Color.BLACK);
-        this.setVisible(true);
-        this.setBounds(0, 0, 2000, 1100);
         
+        this.setBounds(0, 0, 650, 650);
+        this.setLocation(120, 100);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.IniciaComponentes();
+        
     }
    
     public void IniciaComponentes() 
@@ -29,10 +30,10 @@ public class Game extends JFrame implements   KeyListener
         lblf2=new JLabel(new ImageIcon(getClass().getResource("fantasma.gif")));
         lblf2.setBounds(400,350,228,228);
         
-        lblobs=new JLabel(new ImageIcon(getClass().getResource("Obstaculo.jpg")));
-        lblobs.setBounds(1820,820,100,400); // Diferencia de 120 // 700
-        lblObs1=new JLabel(new ImageIcon(getClass().getResource("Obstaculo.jpg")));
-        lblObs1.setBounds(300,250,50,50);
+        lblobs=new JLabel(new ImageIcon(getClass().getResource("Pared.jpg")));//PARED DERECHA INFERIOR
+        lblobs.setBounds(600,500,90,150); // Diferencia de 120 // 700
+        lblObs1=new JLabel(new ImageIcon(getClass().getResource("pared.jpg")));// PARED DERECHA SUPERIOR
+        lblObs1.setBounds(600,0,90,150);
         
         this.getContentPane().add(lblObs1);
         this.getContentPane().add(lblf);
@@ -83,24 +84,24 @@ public class Game extends JFrame implements   KeyListener
                 lblf.setBounds(x,y,128,128);
                 lblf.setIcon(new ImageIcon(getClass().getResource("pacmanIzquierda.gif")));
             }
-            if(y>=1000)// Lineas del Retorno en el eje y
+            if(y>=700)// Lineas del Retorno en el eje y
             {
                 y=-128;
                 lblf.setBounds(x,y,128,128);
             }
             else if(y<=-128)
             {
-                y=1000;
+                y=700;
                 lblf.setBounds(x,y,128,128);
             }
-            if(x>=2000)// Lineas de retorno en el eje X
+            if(x>=700)// Lineas de retorno en el eje X
             {
                 x=-128;
                 lblf.setBounds(x,y,128,128);
             }
             else if(x<=-128)
             {
-                x=2000;
+                x=700;
                 lblf.setBounds(x,y,128,128);
             }
             lblxy.setText("x="+x+" y="+y);
@@ -113,7 +114,11 @@ public class Game extends JFrame implements   KeyListener
                {
                    t.stop();
                }
-               if(x>=1725 && y>=725)
+               if(x>=508 && y>=415 )
+               {
+               t.stop();
+               }
+               if(x>=508  && y <=90)
                {
                t.stop();
                }
