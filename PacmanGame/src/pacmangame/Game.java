@@ -8,7 +8,7 @@ public class Game extends JFrame implements   KeyListener
   //  private JFrame vent;
    JLabel lblf,lblxy,lbl, lblobs, lblf2;
    JLabel lblObs1, lado3, lado4, lado5, lado6, lado7, lado8, lado9, lado10;
-     int x=0,y=0,l;
+     int x=79,y=130,l;
      int x1=0,y1=0;
 
     public Game() 
@@ -48,9 +48,9 @@ public class Game extends JFrame implements   KeyListener
         lado8=new JLabel(new ImageIcon(getClass().getResource("pared.jpg")));// PARED CENTRO SUPERIOR
         lado8.setBounds(200,0,100,50);
         lado9=new JLabel(new ImageIcon(getClass().getResource("pared.jpg")));// PARED CENTRO INFERIOR
-        lado9.setBounds(360,580,100,50);
+        lado9.setBounds(400,580,100,50);
         lado10=new JLabel(new ImageIcon(getClass().getResource("pared.jpg")));// PARED CENTRO INFERIOR
-        lado10.setBounds(158,580,100,50);
+        lado10.setBounds(200,580,100,50);
         
         this.getContentPane().add(lblObs1);
         this.getContentPane().add(lblf);
@@ -108,7 +108,7 @@ public class Game extends JFrame implements   KeyListener
           }
      });
     
-    Timer t=new Timer(1,new ActionListener() // mientras mayor el tiempo del times mas lento ira el programa 
+    Timer t=new Timer(5,new ActionListener() // mientras mayor el tiempo del times mas lento ira el programa 
     {
         @Override
         public void actionPerformed(ActionEvent e) 
@@ -184,6 +184,38 @@ public class Game extends JFrame implements   KeyListener
                {
                t.stop();
                }
+               if((x>=310&&y<=11)&& (x<=460)  )
+               {
+                    t.stop();
+               }
+               if((x>=113&&y<12)&& (x<=255)) 
+               {
+                   t.stop();
+               }
+               if(x<=20&& y<=90  )
+               {
+                   t.stop();
+               }
+               if((x<=20 && y>=160)&& y<=345)
+               {
+                   t.stop();
+               }
+              
+                if(y>=410 && x<=20)
+                {
+                    t.stop();
+                }
+                if((x>=110 &&y>=490)&&x<=260)
+                {
+                    t.stop();
+                }
+              if ((x>=508 && y>=490) && x<=460 )
+              {
+                  t.stop();
+              }
+               
+               
+               
                        
         }
 
