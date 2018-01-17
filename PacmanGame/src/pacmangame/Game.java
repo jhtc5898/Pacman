@@ -108,7 +108,7 @@ public class Game extends JFrame implements   KeyListener
           }
      });
     
-    Timer t=new Timer(5,new ActionListener() // mientras mayor el tiempo del times mas lento ira el programa 
+    Timer t=new Timer(3,new ActionListener() // mientras mayor el tiempo del times mas lento ira el programa 
     {
         @Override
         public void actionPerformed(ActionEvent e) 
@@ -140,24 +140,24 @@ public class Game extends JFrame implements   KeyListener
                 lblf.setBounds(x,y,128,128);
                 lblf.setIcon(new ImageIcon(getClass().getResource("pacmanIzquierda.gif")));
             }
-            if(y>=700)// Lineas del Retorno en el eje y
+            if(y>=575)// Lineas del Retorno en el eje y
             {
-                y=-128;
+                y=-80;
                 lblf.setBounds(x,y,128,128);
             }
-            else if(y<=-128)
+            else if(y<=-80)
             {
-                y=700;
+                y=575;
                 lblf.setBounds(x,y,128,128);
             }
-            if(x>=700)// Lineas de retorno en el eje X
+            if(x>=575)// Lineas de retorno en el eje X
             {
-                x=-128;
+                x=-80;
                 lblf.setBounds(x,y,128,128);
             }
-            else if(x<=-128)
+            else if(x<=-80)
             {
-                x=700;
+                x=575;
                 lblf.setBounds(x,y,128,128);
             }
             lblxy.setText("x="+x+" y="+y);
