@@ -59,6 +59,7 @@ public class Game extends JFrame implements   KeyListener
                 y-=1;
                 lblf.setBounds(x,y,128,128);
                 lblf.setIcon(new ImageIcon(getClass().getResource("pacmanArriba.gif")));
+               
             }
             else if(l==1)
             {
@@ -128,7 +129,8 @@ public class Game extends JFrame implements   KeyListener
         if(e.getKeyCode()==38)
         {
          l=0;
-            t.start();   
+            t.start();  
+             System.err.println("Arriba");
         }
          if(e.getKeyCode()==40)
         {
