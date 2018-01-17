@@ -9,6 +9,7 @@ public class Game extends JFrame implements   KeyListener
    JLabel lblf,lblxy,lbl, lblobs, lblf2;
    JLabel lblObs1;
      int x=0,y=0,l;
+     int x1=0,y1=0;
 
     public Game() 
     {
@@ -40,6 +41,7 @@ public class Game extends JFrame implements   KeyListener
         this.getContentPane().add(lblobs);
         this.getContentPane().add(lblf2);
         
+        
         lblObs1=new JLabel(new ImageIcon(getClass().getResource("Obstaculo.jpg")));
         lblObs1.setBounds(300,250,50,50);
         this.getContentPane().add(lblObs1);
@@ -51,14 +53,34 @@ public class Game extends JFrame implements   KeyListener
         lbl=new JLabel(new ImageIcon(getClass().getResource("cuadro.jpg")));
         lbl.setBounds(0,0,700, 700);
         this.getContentPane().add(lbl);
+        tfan.start();
         addKeyListener(this);
         this.setVisible(true);
     }
+     Timer tfan=new Timer(1,new ActionListener()
+     {
+       @Override
+       public void actionPerformed(ActionEvent ae) 
+       {
+           lblf2.setBounds(x1, y1, 228, 228);
+             x1++;
+             if(x1>=700)// Lineas del Retorno en el eje y
+            {
+                x1=-128;
+                lblf.setBounds(x,y,128,128);
+            }
+             
+           
+          }
+     });
+    
     Timer t=new Timer(1,new ActionListener() // mientras mayor el tiempo del times mas lento ira el programa 
     {
         @Override
         public void actionPerformed(ActionEvent e) 
         {
+             
+            // Pacman
             if(l==0)
             {
                 y-=1;
