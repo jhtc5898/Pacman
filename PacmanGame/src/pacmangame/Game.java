@@ -139,7 +139,8 @@ public class Game extends JFrame implements   KeyListener
          if(e.getKeyCode()==40)
         {
          l=1;
-            t.start();  
+            t.start(); 
+            System.err.println("Abajo");
         }
           if(e.getKeyCode()==37)
         {
