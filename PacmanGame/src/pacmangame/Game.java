@@ -67,8 +67,19 @@ public class Game extends JFrame implements   KeyListener
              if(x1>=700)// Lineas del Retorno en el eje y
             {
                 x1=-128;
-                lblf.setBounds(x,y,128,128);
+                lblf2.setBounds(x1,y1,128,128);
             }
+             if(y1>=700)// Lineas del Retorno en el eje y
+            {
+                y1=-128;
+                lblf2.setBounds(x1,y1,128,128);
+            }
+             if(x1>=300)
+             {
+             y1++;
+             lblf2.setBounds(x1,y1,128,128);
+             }
+                 
              
            
           }
