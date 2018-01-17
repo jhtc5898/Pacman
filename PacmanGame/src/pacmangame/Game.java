@@ -6,13 +6,12 @@ import java.awt.event.*;
 public class Game extends JFrame implements   KeyListener
 {
   //  private JFrame vent;
-   JLabel lblf,lblxy,lbl, lblobs;
+   JLabel lblf,lblxy,lbl, lblobs, lblf2;
    JLabel lblObs1;
      int x=0,y=0,l;
 
     public Game() 
     {
-        
         this.setBackground(Color.BLACK);
         this.setVisible(true);
         this.setBounds(0, 0, 2000, 1100);
@@ -26,6 +25,10 @@ public class Game extends JFrame implements   KeyListener
         
         lblf=new JLabel(new ImageIcon(getClass().getResource("pacman.gif")));
         lblf.setBounds(300,250,128,128);
+        
+        lblf2=new JLabel(new ImageIcon(getClass().getResource("fantasma.gif")));
+        lblf2.setBounds(400,350,228,228);
+        
         lblobs=new JLabel(new ImageIcon(getClass().getResource("Obstaculo.jpg")));
         lblobs.setBounds(1820,820,100,400); // Diferencia de 120 // 700
         lblObs1=new JLabel(new ImageIcon(getClass().getResource("Obstaculo.jpg")));
@@ -34,15 +37,16 @@ public class Game extends JFrame implements   KeyListener
         this.getContentPane().add(lblObs1);
         this.getContentPane().add(lblf);
         this.getContentPane().add(lblobs);
+        this.getContentPane().add(lblf2);
         
-      /* lblObs1=new JLabel(new ImageIcon(getClass().getResource("Obstaculo.jpg")));
+        lblObs1=new JLabel(new ImageIcon(getClass().getResource("Obstaculo.jpg")));
         lblObs1.setBounds(300,250,50,50);
-        this.getContentPane().add(lblObs1);*/
-        
+        this.getContentPane().add(lblObs1);
         lblxy=new JLabel("x="+x+" y="+y);
         lblxy.setBounds(530,460,128,128);
         lblxy.setForeground(Color.WHITE);
         this.getContentPane().add(lblxy);
+        
         lbl=new JLabel(new ImageIcon(getClass().getResource("cuadro.jpg")));
         lbl.setBounds(0,0,700, 700);
         this.getContentPane().add(lbl);
