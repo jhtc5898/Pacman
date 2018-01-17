@@ -180,7 +180,7 @@ public class Game extends JFrame implements   KeyListener
                {
                t.stop();
                }
-               if(x>=508  && y >=168 && x>=508 && y<=326)
+               if(x>=508  && y >=161 && x>=508 && y<=340)
                {
                t.stop();
                }
