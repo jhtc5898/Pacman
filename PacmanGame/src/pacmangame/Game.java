@@ -24,7 +24,7 @@ public class Game extends JFrame implements   KeyListener
     public void IniciaComponentes() 
     { 
         
-        lblf=new JLabel(new ImageIcon(getClass().getResource("fantasma.gif")));
+        lblf=new JLabel(new ImageIcon(getClass().getResource("pacman.gif")));
         lblf.setBounds(300,250,128,128);
         lblobs=new JLabel(new ImageIcon(getClass().getResource("Obstaculo.jpg")));
         lblobs.setBounds(1820,820,100,400); // Diferencia de 120 // 700
@@ -58,25 +58,25 @@ public class Game extends JFrame implements   KeyListener
             {
                 y-=1;
                 lblf.setBounds(x,y,128,128);
-                lblf.setIcon(new ImageIcon(getClass().getResource("fantasma2.gif")));
+                lblf.setIcon(new ImageIcon(getClass().getResource("pacmanArriba.gif")));
             }
             else if(l==1)
             {
                 y+=1;
                 lblf.setBounds(x,y,128,128);
-                lblf.setIcon(new ImageIcon(getClass().getResource("fantasma3.gif")));
+                lblf.setIcon(new ImageIcon(getClass().getResource("pacmanAbajo.gif")));
             }
             else if(l==2)
             {
                 x+=1;
                 lblf.setBounds(x,y,128,128);
-                lblf.setIcon(new ImageIcon(getClass().getResource("fantasma4.gif")));
+                lblf.setIcon(new ImageIcon(getClass().getResource("pacman.gif")));
             }
             else
             {
                 x-=1;
                 lblf.setBounds(x,y,128,128);
-                lblf.setIcon(new ImageIcon(getClass().getResource("fantasma.gif")));
+                lblf.setIcon(new ImageIcon(getClass().getResource("pacmanIzquierda.gif")));
             }
             if(y>=1000)// Lineas del Retorno en el eje y
             {
@@ -108,7 +108,7 @@ public class Game extends JFrame implements   KeyListener
                {
                    t.stop();
                }
-               if(x>=1700 && y>=700)
+               if(x>=1725 && y>=725)
                {
                t.stop();
                }
