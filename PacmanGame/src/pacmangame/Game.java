@@ -110,18 +110,23 @@ public class Game extends JFrame implements   KeyListener
        t.stop();
        
    }
-               if(x==179 && y>=147 && y<=267 || y==130 && x>=190 && x<=330 || x==342 && y>=140 && y<=288 || y==290 && x>=184 && x<=321)//Cuadradocentral 
+               if((x>=210 && y >= 160) &&( x<=310 && y<=260) )
                {
                    t.stop();
                }
-               if(x>=508 && y>=415 )
+               /*if(x==179 && y>=147 && y<=267 || y==130 && x>=190 && x<=330 || x==342 && y>=140 && y<=288 || y==290 && x>=184 && x<=321)//Cuadradocentral 
+               {
+                   t.stop();
+               }
+               
+              /* if(x>=508 && y>=415 )
                {
                t.stop();
                }
                if(x>=508  && y <=90)
                {
                t.stop();
-               }
+               }*/
                
                        
         }
