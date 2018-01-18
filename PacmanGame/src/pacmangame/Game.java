@@ -102,9 +102,7 @@ public class Game extends JFrame implements   KeyListener
              y1++;
              lblf2.setBounds(x1,y1,128,128);
              }
-                 
-             
-           
+          
           }
      });
     
