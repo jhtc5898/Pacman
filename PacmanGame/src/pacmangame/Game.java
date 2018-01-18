@@ -15,7 +15,7 @@ public class Game extends JFrame implements   KeyListener
     {
         this.setBackground(Color.BLACK);
         
-        this.setBounds(0, 0, 650, 650);
+        this.setBounds(0, 0, 675, 650);
         this.setLocation(120, 100);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.IniciaComponentes();
@@ -212,6 +212,10 @@ public class Game extends JFrame implements   KeyListener
               if ((x>=508 && y>=490) && x<=460 )
               {
                   t.stop();
+              }
+              if((x>=300 && y>= 495)&& x<=455)
+              {
+              t.stop();
               }
                
                
